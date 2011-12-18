@@ -13,6 +13,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+HOST = 'localhost'
+PORT = 8000
+
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 from json import dumps, loads
 from subprocess import call
@@ -54,5 +57,5 @@ class HTTPRequestHandler(BaseHTTPRequestHandler):
         self.wfile.write(dumps(response_body))
         self.wfile.write('\n')
 
-server = HTTPServer(('localhost', 8000), HTTPRequestHandler)
+server = HTTPServer((HOST, PORT), HTTPRequestHandler)
 server.serve_forever()
