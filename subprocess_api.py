@@ -41,11 +41,17 @@ class HTTPRequestHandler(BaseHTTPRequestHandler):
 
             returncode = call(request['args'], stdin=stdin, stdout=stdout, stderr=stderr, shell=shell)
 
+            if stdin != None:
+                stdin.close()
+
             stdout.seek(0)
             stderr.seek(0)
 
             response_code = 200
             response_body = {'returncode': returncode, 'stdout': stdout.read(), 'stderr': stderr.read()}
+
+            stdout.close()
+            stderr.close()
         except:
             response_code = 500
             response_body = {'error': format_exc()}
