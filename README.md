@@ -16,6 +16,10 @@
 
 This will run the HTTP server localhost port 8000 by default. If you would like to customise this, change the `HOST` and `PORT` settings at the top of the script.
 
+## Security
+
+This script was written to be used inside a fully trusted environment (including the client, the server and the network). Running this in an untrusted environment is not recommended.
+
 ## Request
 
 The request needs to be an HTTP POST with the request body being a JSON object with the following attributes:
