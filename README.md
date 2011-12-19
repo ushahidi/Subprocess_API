@@ -44,7 +44,7 @@ The returned JSON object will have the following attributes on an unsuccessful c
 
 * `error` The full Python stack trace of the error.
 
-### Example
+## Example
 
     $ curl -d '{"args":["ls","/"]}' localhost:8000
     {"returncode": 0, "stderr": "", "stdout": "bin\nboot\ncdrom\ndev\netc\nhome\ninitrd.img\nlib\nlib32\nlib64\nlost+found\nmedia\nmnt\nopt\nproc\nroot\nrun\nsbin\nselinux\nsrv\nsys\ntmp\nusr\nvar\nvmlinuz\n"}
