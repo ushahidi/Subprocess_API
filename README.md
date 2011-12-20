@@ -14,7 +14,7 @@
     wget https://raw.github.com/ushahidi/Subprocess_API/master/subprocess_api.py
     python subprocess_api.py
 
-This will run the HTTP server localhost port 8000 by default. If you would like to customise this, change the `HOST` and `PORT` settings at the top of the script.
+This will run the HTTP server on localhost port 8000 by default. If you would like to customise this, change the `HOST` and `PORT` settings at the top of the script.
 
 ## Security
 
@@ -46,7 +46,7 @@ The returned JSON object will have the following attributes on a successful call
 
 The returned JSON object will have the following attributes on an unsuccessful call:
 
-* `error` The full Python stack trace of the error.
+* `error` The full Python stack trace of the error as a string.
 
 ## Example
 
